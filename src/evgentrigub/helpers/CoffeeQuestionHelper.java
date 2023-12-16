@@ -1,3 +1,9 @@
+package evgentrigub.helpers;
+
+import evgentrigub.CoffeeMachine;
+import evgentrigub.models.IngredientAmount;
+import evgentrigub.models.Ingredients;
+
 import java.util.Scanner;
 
 public class CoffeeQuestionHelper {
@@ -24,13 +30,13 @@ public class CoffeeQuestionHelper {
     public static void setFillCoffeeCommand() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write how many ml of water you want to add:");
-        CoffeeMachine.machineWater+=scanner.nextInt();
+        Ingredients.MACHINE_WATER +=scanner.nextInt();
         System.out.println("Write how many ml of milk you want to add:");
-        CoffeeMachine.machineMilk+=scanner.nextInt();
+        Ingredients.MACHINE_MILK +=scanner.nextInt();
         System.out.println("Write how many grams of coffee beans you want to add:");
-        CoffeeMachine.machineBeans+=scanner.nextInt();
+        Ingredients.MACHINE_BEANS +=scanner.nextInt();
         System.out.println("Write how many disposable cups you want to add:");
-        CoffeeMachine.machineCups+=scanner.nextInt();
+        Ingredients.MACHINE_CUPS +=scanner.nextInt();
     }
 
     public static void setBuyCoffeeCommand() {
@@ -41,8 +47,8 @@ public class CoffeeQuestionHelper {
     }
 
     public static void setTakeCoffeeCommand() {
-        System.out.println("I gave you $" + CoffeeMachine.machineMoney);
-        CoffeeMachine.machineMoney = 0;
+        System.out.println("I gave you $" + Ingredients.MACHINE_MONEY);
+        Ingredients.MACHINE_MONEY = 0;
     }
 
     public static void showCoffeeMenu(String num) {
